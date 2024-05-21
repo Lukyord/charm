@@ -145,7 +145,7 @@
 
   .interactive {
     position: absolute;
-    @apply bg-white rounded-full w-[25vw] h-[25vw] top-[-12.5vw] left-[-12.5vw];
+    @apply bg-c-light-blue rounded-full w-[25vw] h-[25vw] top-[-12.5vw] left-[-12.5vw];
     mix-blend-mode: var(--blending);
 
     opacity: 0.9;

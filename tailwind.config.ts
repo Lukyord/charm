@@ -92,6 +92,9 @@ const config = {
         "neue-hass-grotesk-medium": ["var(--font-neue-hass-grotesk-medium)"],
         futura: ["var(--font-futura)"],
       },
+      boxShadow: {
+        standard: "4px 4px 6px 0px rgba(0, 0, 0, 0.25)",
+      },
       fontSize: {
         h0: ["600px", { lineHeight: "normal", letterSpacing: "-0.96px" }],
         h1: ["144px", { lineHeight: "normal", letterSpacing: "0" }],

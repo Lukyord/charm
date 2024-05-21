@@ -28,7 +28,7 @@ const neueHassGroteskMedium = localFont({
   fallback: ["serif"],
 });
 const futura = localFont({
-  src: "../public/fonts/Futura/Futura Bold.ttf",
+  src: "../public/fonts/Futura/Futura Medium.otf",
   display: "swap",
   variable: "--font-futura",
   weight: "400",
