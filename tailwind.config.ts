@@ -19,6 +19,19 @@ const config = {
     },
     extend: {
       colors: {
+        // Charm Primary Colors
+        "c-primary": "#BFBFBF",
+        "c-secondary": "#7F7F7F",
+        "c-tertiary": "#404040",
+
+        // Charm Supporting Colors
+        "c-blue": "#307DC0",
+        "c-light-blue": "#629FD6",
+        "c-yellow": "#E88F41",
+        "c-orange": "#E86A3B",
+        "c-red": "#D6493C",
+
+        // Shadcn Colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,6 +91,14 @@ const config = {
         "neue-hass-grotesk-roman": ["var(--font-neue-hass-grotesk-roman)"],
         "neue-hass-grotesk-medium": ["var(--font-neue-hass-grotesk-medium)"],
         futura: ["var(--font-futura)"],
+      },
+      fontSize: {
+        h0: ["600px", { lineHeight: "normal", letterSpacing: "-0.96px" }],
+        h1: ["144px", { lineHeight: "normal", letterSpacing: "0" }],
+        h2: ["72px", { lineHeight: "normal", letterSpacing: "0" }],
+        h3: ["36px", { lineHeight: "normal", letterSpacing: "0" }],
+        paragraph: ["20px", { lineHeight: "normal", letterSpacing: "0.48px" }],
+        subtitle: ["16px", { lineHeight: "normal", letterSpacing: "0.64px" }],
       },
     },
   },
