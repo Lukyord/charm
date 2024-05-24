@@ -57,7 +57,12 @@ const FormSchema = z.object({
   }),
 });
 
-export default function Search() {
+type SearchProps = {
+  type: "white" | "black";
+  hidden?: boolean;
+};
+
+export default function Search({ type, hidden = false }: SearchProps) {
   const [open, setOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [filteredData, setFilteredData] = useState(mockData);
@@ -88,7 +93,8 @@ export default function Search() {
                 flex items-center transition-all duration-300
                 ${cn({
                   "search-animation": open,
-                  "ml-auto": !open,
+                  "ml-auto": !open && type === "white",
+                  "hidden sm:flex": hidden,
                 })}
             `}
         >
@@ -115,7 +121,18 @@ export default function Search() {
                               setIsFocused(false);
                             }
                           }}
-                          className="roman-subtitle placeholder:roman-subtitle py-1 px-0 w-[95%] mx-auto border-b-[1px] border-white bg-transparent rounded-none text-white placeholder:text-white focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 "
+                          className={`
+                                roman-subtitle placeholder:roman-subtitle 
+                                py-1 px-0 w-[95%] mx-auto border-b-[1px] 
+                                bg-transparent rounded-none focus:ring-0 
+                                focus-visible:ring-0 focus-visible:ring-offset-0
+                                ${cn({
+                                  "text-black placeholder:text-black border-black":
+                                    type === "black",
+                                  "text-white placeholder:text-white border-white":
+                                    type === "white",
+                                })}
+                            `}
                         />
                       </FormControl>
                       <FormMessage />
@@ -127,7 +144,10 @@ export default function Search() {
           )}
           {!open ? (
             <HiMagnifyingGlass
-              className="text-white text-[30px]"
+              className={`${cn({
+                "text-black": type === "black",
+                "text-white": type === "white",
+              })} text-[30px]`}
               onClick={() => setOpen((prev) => !prev)}
             />
           ) : (
@@ -136,7 +156,10 @@ export default function Search() {
                 setOpen((prev) => !prev);
                 setIsFocused(false);
               }}
-              className="text-white text-[30px]"
+              className={`${cn({
+                "text-black": type === "black",
+                "text-white": type === "white",
+              })} text-[30px]`}
             />
           )}
         </div>
