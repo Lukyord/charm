@@ -89,7 +89,7 @@
     @apply font-neue-hass-grotesk-light text-h3;
   }
   .light-p {
-    @apply font-neue-hass-grotesk-light text-paragraph;
+    @apply font-neue-hass-grotesk-light text-paragraph tracking-wider;
   }
   .light-subtitle {
     @apply font-neue-hass-grotesk-light text-subtitle;

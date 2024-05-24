@@ -80,16 +80,6 @@ export default function Search() {
     return () => subscription.unsubscribe();
   }, [form]);
 
-  const handleOnFocus = () => {
-    setIsFocused(true);
-    console.log("focused");
-  };
-
-  const handleOnBlur = () => {
-    setIsFocused(false);
-    console.log("blurred");
-  };
-
   return (
     <Popover open={open}>
       <PopoverTrigger asChild>
@@ -153,7 +143,7 @@ export default function Search() {
       </PopoverTrigger>
       {isFocused && open && (
         <PopoverContent
-          className="w-full p-0"
+          className="w-full"
           align="start"
           alignOffset={30}
           onMouseDown={(e) => e.preventDefault()}

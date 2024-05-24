@@ -6,6 +6,13 @@ import {
   inter,
   futura,
 } from "@/fonts";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 import "./globals.css";
 
@@ -22,17 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`  
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`  
                 ${inter.variable} ${neueHassGroteskLight.variable} 
                 ${neueHassGroteskRoman.variable} ${neueHassGroteskMedium.variable}
                 ${futura.variable}
               `}
-      >
-        <Navbar />
-        {children}
-      </body>
-    </html>
+        >
+          <Navbar />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
