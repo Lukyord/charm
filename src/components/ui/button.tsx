@@ -18,6 +18,7 @@ const buttonVariants = cva(
           "bg-white roman-subtitle border-transparent rounded-[50px] transition-all duration-300 delay-0 shadow-standard border-[2px] hover:border-black",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        search: "w-full bg-transparent",
       },
       size: {
         default: "px-[20px] py-[10px]",

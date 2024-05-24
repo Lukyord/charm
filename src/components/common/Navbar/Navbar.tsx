@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import { HiMagnifyingGlass } from "react-icons/hi2";
 import { Images } from "@/constant/Images";
 
 import { Button } from "@/components/ui/button";

@@ -1,0 +1,25 @@
+@keyframes open-search {
+  0% {
+    flex-grow: 1;
+  }
+  33% {
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+  66% {
+    flex-grow: 1;
+    background-color: #ffffff30;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
+  100% {
+    flex-grow: 1;
+    background-color: #ffffff30;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
+}
+
+.search-animation {
+  animation: open-search 0.5s ease-in-out forwards;
+}
