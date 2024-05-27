@@ -12,21 +12,45 @@ export default function HeroButton() {
     <button
       onClick={() => setActiveTab("animation of the day")}
       className="
-            mb-[10vh] flex
-            items-center gap-4 font-neue-hass-grotesk-light 
-            text-white sm:mb-0
+            group mb-[10vh]
+            flex items-center gap-4 
+            font-neue-hass-grotesk-light text-white sm:mb-0
             lg:text-[13px] xl:text-subtitle
         "
     >
       <p>Animation of the Day</p>
       <div
         className="
-                flex items-center justify-center 
+                relative flex size-[50px]
+                items-center justify-center overflow-hidden 
                 rounded-full border border-white 
-                p-3 lg:p-4 xl:p-5
+                lg:size-[60px] xl:size-[70px]
             "
       >
-        <BsArrowUpRight className="size-[16px] lg:size-[20px] xl:size-[24px]" />
+        <BsArrowUpRight
+          className="
+                ease-in-out-quint l size-[16px] 
+                h-full w-full transition-all duration-300
+                group-hover:translate-x-[calc(100%+16px)] group-hover:translate-y-[calc(-100%-16px)]
+                lg:size-[20px]
+                lg:group-hover:translate-x-[calc(100%+20px)] lg:group-hover:translate-y-[calc(-100%-20px)]
+                xl:size-[24px]
+                xl:group-hover:translate-x-[calc(100%+24px)] xl:group-hover:translate-y-[calc(-100%-24px)]
+            "
+        />
+        <BsArrowUpRight
+          className="
+                ease-in-out-quint absolute right-[100%] top-[100%] 
+                size-[16px] h-full w-full transition-all
+                duration-300 
+                group-hover:translate-x-[calc(100%+16px)] group-hover:translate-y-[calc(-100%-16px)]
+                lg:size-[20px]
+                lg:group-hover:translate-x-[calc(100%+20px)] lg:group-hover:translate-y-[calc(-100%-20px)]
+                xl:size-[24px]
+                xl:group-hover:translate-x-[calc(100%+24px)] xl:group-hover:translate-y-[calc(-100%-24px)]
+                
+            "
+        />
       </div>
     </button>
   );
