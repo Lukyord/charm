@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { useActiveHeroTab } from "@/context/useActiveHeroTab";
 
 export default function HeroFeaturedAnimation() {
@@ -11,7 +11,7 @@ export default function HeroFeaturedAnimation() {
   return (
     <div className="h-full w-full">
       animation
-      <Button onClick={() => setActiveTab(1)}>back</Button>
+      <Button onClick={() => setActiveTab("main")}>back</Button>
     </div>
   );
 }

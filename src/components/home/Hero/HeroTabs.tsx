@@ -13,15 +13,17 @@ export default function HeroTabs({ children }: { children: React.ReactNode }) {
     <div className="h-full w-full overflow-hidden">
       <div
         className={`
-            flex h-full w-[200vw] transition-transform duration-300 
+            ease-in-out-quint flex h-full w-[200vw] transition-all 
+            duration-700
             ${cn({
-              "translate-x-0": activeTab === 1,
-              "-translate-x-1/2": activeTab === 2,
+              "translate-x-0": activeTab === "main",
+              "-translate-x-1/2": activeTab === "animation of the day",
             })}
         `}
+        style={{}}
       >
-        <div className="w-[100vw]">{childrenArray[0]}</div>
-        <div className="w-[100vw]">{childrenArray[1]}</div>
+        <div className="h-[90vh] w-[100vw]">{childrenArray[0]}</div>
+        <div className="h-[90vh] w-[100vw]">{childrenArray[1]}</div>
       </div>
     </div>
   );

@@ -103,6 +103,9 @@ const config = {
         paragraph: ["20px", { lineHeight: "normal", letterSpacing: "0.48px" }],
         subtitle: ["16px", { lineHeight: "normal", letterSpacing: "0.64px" }],
       },
+      transitionTimingFunction: {
+        "in-out-quint": "cubic-bezier(0.83, 0, 0.17, 1)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

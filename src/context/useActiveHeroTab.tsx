@@ -2,9 +2,11 @@
 
 import React, { createContext, useContext, useState } from "react";
 
+type HeroTabs = "main" | "animation of the day";
+
 type ActiveHeroTabType = {
-  activeTab: 1 | 2;
-  setActiveTab: React.Dispatch<React.SetStateAction<1 | 2>>;
+  activeTab: HeroTabs;
+  setActiveTab: React.Dispatch<React.SetStateAction<HeroTabs>>;
 };
 
 export const ActiveHeroTabContext = createContext<ActiveHeroTabType | null>(
@@ -16,7 +18,7 @@ const ActiveHeroTabContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [activeTab, setActiveTab] = useState<1 | 2>(1);
+  const [activeTab, setActiveTab] = useState<HeroTabs>("main");
 
   return (
     <ActiveHeroTabContext.Provider
