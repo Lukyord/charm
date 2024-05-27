@@ -166,18 +166,18 @@ export default function Search({ type, hidden = false }: SearchProps) {
       </PopoverTrigger>
       {isFocused && open && (
         <PopoverContent
-          className="w-full"
+          className="w-full p-0"
           align="start"
           alignOffset={30}
           onMouseDown={(e) => e.preventDefault()}
         >
-          <ScrollArea className="h-fit w-[350px] rounded-md border p-4">
+          <ScrollArea className="h-fit w-[350px] rounded-md border py-2">
             {filteredData.length > 0 ? (
               filteredData.map((data, i) => (
                 <React.Fragment key={data.value}>
                   <Link
                     href={`/${data.value}`}
-                    className="light-subtitle w-full"
+                    className="light-subtitle w-full p-2"
                   >
                     {data.label}
                   </Link>
